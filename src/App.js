@@ -10,7 +10,7 @@ export default function App(){
         <ul>
           <li><Link to='/'>Início</Link></li>
           <li><Link to='/filmes'>Filmes</Link></li>
-          <li>Séries</li>
+          <li><Link to='/series'>Séries</Link></li>
         </ul>
       </nav>
       <ApplicationRoutes />
