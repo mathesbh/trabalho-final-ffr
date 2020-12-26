@@ -9,7 +9,7 @@ export default function App(){
       <nav>
         <ul>
           <li><Link to='/'>Início</Link></li>
-          <li>Filmes</li>
+          <li><Link to='/filmes'>Filmes</Link></li>
           <li>Séries</li>
         </ul>
       </nav>
