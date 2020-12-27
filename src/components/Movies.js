@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ApiService } from '../api/ApiService'
 import { MovieList } from './MovieList'
-import './Movies.css'
 
 export default function Movies() {
     const [movies, setMovies] = useState([])
@@ -21,7 +20,7 @@ export default function Movies() {
         <div className="container">
             <div className="row">
                 <div className="col-md-12">
-                    <h2>Filmes populares</h2>
+                    <h2 className="m-4 text-center bg-light text-muted">Filmes Populares</h2>
                     <MovieList movies={movies} />
                 </div>
             </div>
