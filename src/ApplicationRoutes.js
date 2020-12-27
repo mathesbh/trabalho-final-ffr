@@ -9,7 +9,7 @@ export const ApplicationRoutes = () => (
     <>
         <Route path="/" exact component={Home} />
         <Route path="/filmes" component={Movies} />
-        <Route path="/filme" component={MovieDetails} />
+        <Route path="/filme/:id" component={MovieDetails} />
         <Route path="/series" component={Series} />
     </>
 )
