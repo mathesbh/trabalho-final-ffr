@@ -1,9 +1,12 @@
 import React from 'react'
 
 export const Home = () => (
-    <>
-        <h1>Bem Vindo(a)</h1>
-        <h3>Portal para explorar milhões de Filmes e Séries!</h3>
-    </>
-    
+    <div className="container">
+        <div className="row">
+            <div className="col-md-12 text-center text-muted bg-light m-4">
+                <h2>Bem Vindo(a),</h2>
+                <h3>Ao portal com os melhores filmes populares!</h3>
+            </div>
+        </div>
+    </div>
 ) 
