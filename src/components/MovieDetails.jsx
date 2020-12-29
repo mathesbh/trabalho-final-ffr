@@ -18,7 +18,7 @@ export const MovieDetails = (props) => {
 
     const favorites = useSelector(state => state.favorite.favorite)
 
-    const hasFavorite = favorites.filter(m => m.playload === movie.data.title).length !== 0
+    const hasFavorite = favorites.filter(m => m === movie.data.title).length !== 0
 
     return (
         <div className="container">

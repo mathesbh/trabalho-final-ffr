@@ -1,11 +1,10 @@
 import React from 'react'
-import {  useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { ButtonRemove } from './ButtonRemove'
 
-
 export const FavoriteList = () => {
-    const favorites = useSelector(state => state.favorite.favorite) 
-
+    const favorites = useSelector(state => state.favorite.favorite)
+    
     return (
         <div className="container">
             <div className="row">
@@ -14,8 +13,8 @@ export const FavoriteList = () => {
                     <ul className="list-group">
                         {favorites.map((movie, index) => (
                             <div key={index} className="list-group-item text-center">
-                                <li className="list-group-item text-muted bg-light">{movie.playload}</li>
-                                <ButtonRemove />
+                                <li className="list-group-item text-muted bg-light">{movie}</li>
+                                <ButtonRemove movie={movie} />
                             </div>
                         ))}
                     </ul>
