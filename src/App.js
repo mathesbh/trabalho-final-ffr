@@ -10,7 +10,6 @@ export default function App() {
         <div>
           <ul className="navbar-nav mr-auto">
             <li className="nav-item"><Link className="nav-link" to='/filmes'>Filmes</Link></li>
-            <li className="nav-item"><Link className="nav-link" to='/series'>Séries</Link></li>
             <li className="nav-item"><Link className="nav-link" to='/listaFavoritos'>Meus Favoritos</Link></li>
           </ul>
         </div>
