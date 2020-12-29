@@ -1,5 +1,8 @@
 import React, { useState, useEffect} from 'react'
+import { useSelector } from 'react-redux'
 import { ApiService } from '../api/ApiService'
+import { FavoriteButton } from './FavoriteButton'
+import { FavoriteInfo } from './FavoriteInfo'
 
 export const MovieDetails = (props) => {
     const [movie, setMovie] = useState({ data: [] })
@@ -13,6 +16,10 @@ export const MovieDetails = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
+    const favorites = useSelector(state => state.favorite.favorite)
+
+    const hasFavorite = favorites.filter(m => m.playload === movie.data.title).length !== 0
+
     return (
         <div className="container">
             <div className="row m-4">
@@ -24,7 +31,9 @@ export const MovieDetails = (props) => {
                     <h5>Sinopse:</h5>
                     <h5>{movie.data.overview}</h5>
                     <p><strong>Votos: {movie.data.vote_average}</strong></p>
-                    <button className="btn btn-outline-success">Favoritar</button>
+                    <span>
+                        { hasFavorite ? <FavoriteInfo /> : <FavoriteButton movie={movie} /> }
+                    </span>
                 </div>
             </div>
         </div>
